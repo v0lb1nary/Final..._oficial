@@ -13,7 +13,7 @@ header{
 }
 
 #content{
-    background-color: chocolate;
+    background-color: rgb(211, 120, 55);
     margin: 1em;
     margin-left: 2em;
     margin-right: 2em;
@@ -22,4 +22,27 @@ header{
 
 footer{
     background-color: darkgoldenrod;
+}
+
+form > *{
+    margin: 1em;
+}
+
+form > input[type=text], form > textarea{
+    display: inline-block;
+    padding-left: 10px;
+    font: 1em sans-serif;
+    width: 300px;
+    -moz-box-sizing: 300px;
+    box-sizing: border-box;
+    
+}
+
+form > input[type=submit]{
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+form > label{
+    text-align: right;
 }

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    Cadastro
+{% endblock title %}
+    
+
+{% block content %}
+    <h1>Cadastre-se</h1>
+    <p>Preencha os campos a baixo para se cadastrar no sistema</p>
+
+    <form action="" method="post">
+
+        {{ form_cdst.as_p }}
+        {% csrf_token %}
+        <input type="submit" value="Cadastrar me">
+
+    </form>
+{% endblock content %}
+    

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    Painel de Controle
+{% endblock title %}
+    
+
+{% block content %}
+    <h1>Painel de controle</h1>
+    <hr>
+    
+    {% if request.user.is_authenticated %}
+        <p>Bem vindo {{ request.user.first_name }} , aqui é exibido todas as informações de conta </p>
+    {% endif %}
+        
+{% endblock content %}
+    
