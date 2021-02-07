@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}    {% endblock title %}</title>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head>
+    <body>
+
+        <header>
+            <!-- {% if request.user.is_authenticated %} {% endif %}-->
+            <nav>
+                <li>Teste</li>
+                <li>Teste</li>
+                <li>Teste</li>
+            </nav>
+        </header>
+
+        <div id="content">
+            {% block content %}
+                
+            {% endblock content %}
+        </div>
+
+        <aside>
+            {% block aside %}
+                
+            {% endblock aside %}
+        </aside>
+
+        <footer>
+            <p>Footer</p>
+        </footer>
+
+    </body>
+</html>

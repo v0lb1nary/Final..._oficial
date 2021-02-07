@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav > li{
+    display: inline;
+    margin: 1em;
+}
+
+header{
+    background-color: burlywood;
+}
+
+#content{
+    background-color: chocolate;
+    margin: 1em;
+    margin-left: 2em;
+    margin-right: 2em;
+
+}
+
+footer{
+    background-color: darkgoldenrod;
+}
