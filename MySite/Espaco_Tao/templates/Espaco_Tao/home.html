@@ -20,14 +20,25 @@
         <h1>Modalidades de nosso Espaço</h1>
         {% for i in modalidade %}
             <div class="modalidades">
-                <img src="" alt="Texte" class="img_modalidades">
+                <img src="" alt="imagem" class="img_modalidades">
                 <div class="text">
                     <h3> {{ i.modalidade }} </h3>
                     <p> {{ i.descricao }} </p>
                 </div>
             </div>
         {% endfor %}
-            
+        
+        <div id="rede_sociais">
+            <h2>
+                Redes Sociais
+            </h2>
+            <div id="nav_rede">
+                <div>Facebook</div>
+                <div>Instagram</div>
+                <div>WhatsApp</div>
+            </div>
+        </div>
+        
     </aside>
 {% endblock aside %}
     

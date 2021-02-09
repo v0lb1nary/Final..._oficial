@@ -35,8 +35,12 @@ header{
         nav{
             margin: 0.1em;
         }
+        nav *{
+            font-family: 'Muli', sans-serif; font-weight:normal;
+        }
         
             #camp_nav_01, #camp_nav_02{
+                font-size: .97em;
                 vertical-align: middle;
                 display: inline;
                 margin: 6em;
@@ -46,6 +50,7 @@ header{
             }
             
             #camp_visible_nav_01, #camp_visible_nav_02{
+                font-size: .9em;
                 position: absolute;
                 z-index: 2;
                 visibility: hidden; 
@@ -78,21 +83,14 @@ header{
         }
 
         #middle_pag{
-            display: inline-flex;
             background-color: orchid;
-            width: auto;
-            margin-top: 1em;
-            margin-left: 2em;
-            margin-right: 2em;
-            padding: 1em;
+            margin: 1em 1em 1em 1em;
         }
         #conteudo{
             background-color: lightcoral;
             padding: 1em;
             width: auto;
         }
-
-           
 
 form{
     border: 1px double black;
@@ -105,7 +103,7 @@ form{
 }
 
 form > p {
-    margin: 1em 0 1em 1em
+    margin: 1em 0 1em 1em;
 }
 
 form > p > *{
@@ -150,6 +148,27 @@ form > input[type=submit]{
     color: rgb(33, 0, 99);
 }
 
-    footer{
-        visibility: hidden;
-    }
+#user_perfil{
+    padding: .5em;
+}
+#user_perfil p{
+    font-family: 'Muli', sans-serif; 
+    font-weight:normal; 
+}
+#user_perfil > p{
+    font-size: .95em;
+}
+#user_list{
+    margin: 1em;
+}
+#user_list li{
+    margin: 1em;
+    list-style-type: none;
+}
+#user_list p{ 
+    font-weight: bolder;
+}
+
+footer{
+    visibility: hidden;
+}

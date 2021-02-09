@@ -39,10 +39,10 @@
                     </div>
                     
                     {% if request.user.is_authenticated %}
-                        <div id="camp_nav_02" onmouseover="camp_nav_visible('camp_nav_02')" onmouseout="camp_nav_invisible('camp_nav_02')">Painel de Controle</div>
+                        <div id="camp_nav_02" onmouseover="camp_nav_visible('camp_nav_02')" onmouseout="camp_nav_invisible('camp_nav_02')">Olá {{ request.user.first_name }}</div>
                         <div id="camp_visible_nav_02" onmouseover="camp_nav_visible('camp_nav_02')" onmouseout="camp_nav_invisible('camp_nav_02')">
                             <!--& Campo de Navegação -->
-                            <li><a href="{% url 'painel_controle' %}">Perfil</a></li>
+                            <li><a href="{% url 'painel_controle' %}">Painel de Controle</a></li>
                             <li><a href="">Marcar horario</a></li>
                             <li><a href="{% url 'logout' %}">Logout</a></li>
                         </div>

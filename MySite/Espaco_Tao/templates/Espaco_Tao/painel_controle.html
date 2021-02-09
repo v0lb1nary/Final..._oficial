@@ -7,24 +7,20 @@
     
 
 {% block content %}
-    <h1>Painel de Controle</h1>
-    <hr>
-    
-    {% if request.user.is_authenticated %}
+    <div id="user_perfil">
+        <h2>Painel de Controle</h2>
+        <!-- <hr> -->
+
         <p>Bem vindo {{ request.user.first_name }}, aqui é exibido todas as informações de conta </p>
-    {% endif %}
-    
-    <hr>
-    <div>
-        {% if request.user.is_authenticated %}
-            <h3>informações de usuario</h3>
+        <br><hr>
+        <div id="user_list">
+            <p>Informações de usuário:</p>
+            <li>Nome de usuário: <strong> {{ request.user.username }} </strong></li>
+            <li>Email: <strong> {{ request.user.email }} </strong></li>
+            <li>Nome: <strong> {{ request.user.get_full_name }} </strong></li>
+            <li>Data de entrada: <strong> {{ request.user.date_joined }} </strong></li>
 
-            <p>Nome de usuario: {{ request.user.username }}</p>
-            <p>Email: {{ request.user.email }}</p>
-            <p>Nome: {{ request.user.get_full_name }}</p>
-            <p>Data de entrada: {{ request.user.date_joined }}</p>
-        {% endif %}
+        </div>
     </div>
-
 {% endblock content %}
     

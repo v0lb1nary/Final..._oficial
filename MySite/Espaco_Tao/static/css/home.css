@@ -7,28 +7,57 @@ header{
 #conteudo{
     width: 65%;
 }
-
+#middle_pag{
+    display: inline-flex;
+}
 aside{
     width: 35%;
     padding: 1em;
     background-color: mediumpurple;
 }   
-
 .modalidades{
     display: inline-flex;
     margin: .3em;
-    padding: .5em;
+    margin-top: 3em;
     border: 1px solid black;
 }
 .img_modalidades{
-    width: 20%;
+    width: 12%;
+    border: 1px double gold;
 }
+
 .modalidades .text :first-child{
-    margin: .3em;
-    margin-left: 1em;
+    text-align: right;
+    margin: .2em;
+    margin: 0 .8em .8em 1em;
+    border-bottom: 1px solid black;
     font-weight: bold;    
 }
 .modalidades .text{
+    /* padding: 1em; */
     text-align: left;
-    width: 80%;
+    width: fit-content;
+    padding: 1em;
+    /* margin: .5em; */
+}
+
+#rede_sociais{
+    margin: 2em;
+    padding: 1em;
+    text-align: center;
+    border: 1px dashed beige;
+}
+#rede_sociais{
+    
+}
+#nav_rede div{
+    display: inline-block;
+    margin: 1em;
+    padding: .5em;
+    text-align: center;
+    vertical-align: middle;
+    width: 90px; height: 70px;
+    border-radius: 5px;
+    background-color: teal;
+
 }
