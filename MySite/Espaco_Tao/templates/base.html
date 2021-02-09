@@ -19,18 +19,19 @@
         <header>
             <!--& Cabeçario -->
 
-            <div id="header_empresarial">
-                <!--todo Nome e Slogan da Empresa -->
-                <div id="logo_empresarial"> <img src="" alt="Logo_Empresarial"></div>
-                <div id="slogan_empresarial"> Slogan </div>
-            </div>
-
             <div id="campo_nave">
+
+                <div id="header_empresarial">
+                    <!--& Nome e Slogan da Empresa -->
+                    <div id="logo_empresarial">Espaço Tao da Luz</div>
+                </div>
+
+            
                 <!--* Linha de Navegação -->
                 <nav>
                     <div id="camp_nav_01" onmouseover="camp_nav_visible('camp_nav_01')" onmouseout="camp_nav_invisible('camp_nav_01')">Home</div>
                     <div id="camp_visible_nav_01" onmouseover="camp_nav_visible('camp_nav_01')" onmouseout="camp_nav_invisible('camp_nav_01')">
-                        <!--todo Campo de Navegação -->
+                        <!--& Campo de Navegação -->
                         <li><a href="{% url 'home' %}">Pagina inicial</a></li>
                         <li><a href="">Quem nos somos</a></li>
                         <li><a href="">Terapeutas</a></li>
@@ -39,7 +40,7 @@
                     {% if request.user.is_authenticated %}
                         <div id="camp_nav_02" onmouseover="camp_nav_visible('camp_nav_02')" onmouseout="camp_nav_invisible('camp_nav_02')">Painel de Controle</div>
                         <div id="camp_visible_nav_02" onmouseover="camp_nav_visible('camp_nav_02')" onmouseout="camp_nav_invisible('camp_nav_02')">
-                            <!--todo Campo de Navegação -->
+                            <!--& Campo de Navegação -->
                             <li><a href="{% url 'painel_controle' %}">Perfil</a></li>
                             <li><a href="">Marcar horario</a></li>
                             <li><a href="{% url 'logout' %}">Logout</a></li>
@@ -47,7 +48,7 @@
                     {% else %}
                         <div id="camp_nav_02" onmouseover="camp_nav_visible('camp_nav_02')" onmouseout="camp_nav_invisible('camp_nav_02')">Conta</div>
                         <div id="camp_visible_nav_02" onmouseover="camp_nav_visible('camp_nav_02')" onmouseout="camp_nav_invisible('camp_nav_02')">
-                            <!--todo Campo de Navegação -->
+                            <!--& Campo de Navegação -->
                             <li><a href="{% url 'login' %}">Login</a></li>
                             <li><a href="{% url 'cadastro' %}">Cadastar-me</a></li>
                             <li><a href="">Contato</a></li>
@@ -62,15 +63,21 @@
 
         <div id="middle_pag">
 
-            <div id="conteudo"><!--todo Conteúdo da pagina -->
+            <div id="conteudo"><!--& Conteúdo da pagina -->
 
                 {% block content %} {% endblock content %}
 
             </div>
 
-            <!--? <aside>
-                <div id="conteudo_aside"> {% block aside %} {% endblock aside %} </div> 
-            </aside> -->
+            
+            <!-- {% if request.url.name ==  %}
+                <aside>
+                {% block aside %} {% endblock aside %}
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt quam aliquam molestias odit est repellat tempore obcaecati non sint placeat consequatur nisi, quo, assumenda eveniet. Officiis possimus quis eveniet eius.</p>
+                </aside> 
+            {% endif %} -->
+                
+            
 
         </div>
 
@@ -85,13 +92,13 @@
             </div>
 
             <div id="footer_empresarial">
-                <!--todo Nome e Slogan da Empresa -->
+                <!--& Nome e Slogan da Empresa -->
                 <div id=""> <img src="" alt="Logo_Empresarial"></div>
                 <div id=""> Slogan </div>
             </div>
 
             <div id="direito_register">
-                <!--todo Registro autorial da pagina -->
+                <!--& Registro autorial da pagina -->
                 <div> direito_register </div> <!-- p -->
             </div>
 

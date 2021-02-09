@@ -7,22 +7,30 @@
     background-color: #b217f0;
 }
 
-    header{
-        background-color: rgb(51, 99, 202);
-    }
-        #header_empresarial{
-            background-color: rgb(184, 92, 214);
-            text-align: center;
-            padding: 1em;
-        }
-            /* #logo_Empresarial{} */
-            /* #slogan_empresarial{} */
+h1, h2, h3, h4, h5 , h6 { font-family: 'Muli', sans-serif; font-weight:normal; }
 
-    #campo_nave{
-        vertical-align: middle;
-        align-items: center;
-        padding: 0.1em;
-    }
+header{
+    background-color: rgb(51, 99, 202);
+}
+
+#header_empresarial{
+    font-family: 'Muli', sans-serif;
+    color:#f3f7cc;
+    font-size:20px;
+    /* margin-right:10%; */
+}
+
+#logo_empresarial{
+    /* width: 50px;
+    height: 50px; */
+}
+
+#campo_nave{
+    display: inline-flex;
+    vertical-align: middle;
+    padding: .7em;
+}
+
         nav{
             margin: 0.3em;
         }
@@ -35,9 +43,7 @@
                 padding: 0.45em;
                 min-width: 4em;
             }
-            #camp_nav_02{
-                animation: both;
-            }
+            
             #camp_visible_nav_01, #camp_visible_nav_02{
                 position: absolute;
                 z-index: 2;
@@ -66,65 +72,83 @@
                     background-color: aqua;
                 } */
     
-    body{
-        margin: 0;
-        padding: 0;
-        
-    }
+
         #middle_pag{
+            display: inline-flex;
+            background-color: orchid;
+            width: auto;
+            margin-top: 1em;
             margin-left: 2em;
             margin-right: 2em;
             padding: 1em;
-            background-color: lightcoral;
         }
-            form{
-                border: 1px double black;
-                border-radius: 0.3em;
-                width: 600px;
-                background-color: darkviolet;
-                margin: 0;
-                padding-top: 0.6em;
-                padding-bottom: 1em;
-            }
-            form > p {
-                margin: 1em 0 1em 1em
-            }
-            form > p > *{
-                vertical-align: middle;
-                display: inline-block;
-                padding-left: 5px;
-                font: 1em sans-serif;
-                width: 150px;
-                -moz-box-sizing: 150px;
-                box-sizing: border-box;
-            }
-            form > p > label{
-                text-align: left;
-                width: 140px;
-            }
-            form > p > input, form > p > option{
-                font-size: 0.9em;
-            }
-            form > p > input, form > p > select{
-                padding: .1em;
-                border: 1px solid rgb(35, 35, 197);
-                border-radius: .3em;
-            }
-            form > input[type=submit]{
-                padding: 0.2em;
-                /* float: left; */
-                display: block;                
-                margin-top: 1.5em;
-                margin-bottom: 1.5em;
-                margin-left: 2em;
-            }
-            .helptext{
-                display: inline-block;
-                width: 250px;
-                font-size: 0.80em;
-                font-style: italic;
-                color: rgb(33, 0, 99);
-            }
+        #conteudo{
+            width: 65%;
+            background-color: lightcoral;
+            padding: 1em;
+        }
+
+        aside{
+            width: 35%;
+            padding: 1em;
+            background-color: mediumpurple;
+        }      
+
+form{
+    border: 1px double black;
+    border-radius: 0.3em;
+    width: 600px;
+    background-color: darkviolet;
+    margin: 0;
+    padding-top: 0.6em;
+    padding-bottom: 1em;
+}
+
+form > p {
+    margin: 1em 0 1em 1em
+}
+
+form > p > *{
+    vertical-align: middle;
+    display: inline-block;
+    padding-left: 5px;
+    font: 1em sans-serif;
+    width: 150px;
+    -moz-box-sizing: 150px;
+    box-sizing: border-box;
+}
+
+form > p > label{
+    text-align: left;
+    width: 140px;
+}
+
+form > p > input, form > p > option{
+    font-size: 0.9em;
+}
+
+form > p > input, form > p > select{
+    padding: .1em;
+    border: 1px solid rgb(35, 35, 197);
+    border-radius: .3em;
+}
+
+form > input[type=submit]{
+    padding: 0.2em;
+    /* float: left; */
+    display: block;                
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    margin-left: 2em;
+}
+
+.helptext{
+    display: inline-block;
+    width: 250px;
+    font-size: 0.80em;
+    font-style: italic;
+    color: rgb(33, 0, 99);
+}
 
     footer{
         visibility: hidden;
