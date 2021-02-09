@@ -37,11 +37,11 @@ class Terapeuta(Infos_Adicionais, User):
 class Cliente(Infos_Adicionais, User):
     """ Classe especilizada (Insfons_Adicionais e User) """
 
-    PROFISSAO_CHOICE = (('desempregado', 'Desempregado'), ('empregado', 'Empregado'))
-    ESTADO_CIVIL_COICE = (('solteiro(a)','Solteiro(a)'),('casado(a)','Casado(a)'),('divorciado(a)','Divorciado(a)'),('viúvo(a)','Viúvo(a)'))
+    PROFISSAO_CHOICE = (('',''), ('desempregado', 'Desempregado'), ('empregado', 'Empregado'))
+    ESTADO_CIVIL_COICE = (('',''), ('solteiro(a)','Solteiro(a)'),('casado(a)','Casado(a)'),('divorciado(a)','Divorciado(a)'),('viúvo(a)','Viúvo(a)'))
 
-    nascimento = models.DateField(auto_now=False, auto_now_add=False, blank=False, default=None, help_text='Campo obrigatório*')
-    profissao = models.CharField(max_length=20, choices=PROFISSAO_CHOICE, default='desempregado', blank=True)
+    nascimento = models.DateField(auto_now=False, auto_now_add=False, blank=False, default='', help_text='Campo obrigatório*')
+    profissao = models.CharField(max_length=20, choices=PROFISSAO_CHOICE, default='', blank=True)
     estado_civil = models.CharField(max_length=20, choices=ESTADO_CIVIL_COICE, default='solterio(a)', blank=True)
 
     class Meta:
@@ -61,13 +61,14 @@ class Modalidade(models.Model):
     MODALIDADES_TUPLA = [
         ('', ''),
         ('Terapia', 'Terapia'),
-        ('Tai Chi Chuan', 'Tai Chi Chuan'),
+        ('Tai Chi Chuan', 'Tai Chi Chuan'), 
         ('Cone Hindu', 'Cone Hindu'),
         ('Barras de Access', 'Barras de Access'),]
 
-    modalidade = models.CharField(max_length=30, choices=MODALIDADES_TUPLA, default='', unique=True)
+    modalidade = models.CharField(max_length=30, choices=MODALIDADES_TUPLA, default=None, unique=True)
     valor = models.FloatField(blank=False, default=None, help_text='Campo obrigatório*')
     tempo_duracao = models.DurationField(blank=False, default=None, help_text='Campo obrigatório*')
+    descricao = models.TextField(blank=True, default=None, help_text='Aqui comente sobre o que e/ou como é realiado essa modalidade')
 
     class Meta:
         verbose_name = 'Modalidade'

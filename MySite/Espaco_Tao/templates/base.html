@@ -2,39 +2,165 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{% block title %}    {% endblock title %}</title>
-        <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <title> {% block title %} {% endblock title %} </title>
+
+</head>
+
+<div id="global_box">
+
     <body>
 
         <header>
-            <!-- {% if request.user.is_authenticated %} {% endif %}-->
-            <nav>
-                <li><a href="{% url 'cadastro' %}"> Cadastrar </a></li>
-                <li><a href="{% url 'login' %}"> Login </a></li>
-                <li><a href="{% url 'painel_controle' %}"> Painel de Controle </a></li>
-            </nav>
+            <!--& Cabeçario -->
+
+            <div id="header_empresarial">
+                <!--todo Nome e Slogan da Empresa -->
+                <div id="logo_empresarial"> <img src="" alt="Logo_Empresarial"></div>
+                <div id="slogan_empresarial"> Slogan </div>
+            </div>
+
+            <div id="campo_nave">
+                <!--* Linha de Navegação -->
+                <nav>
+                    <div id="camp_nav_01" onmouseover="camp_nav_visible('camp_nav_01')" onmouseout="camp_nav_invisible('camp_nav_01')">Home</div>
+                    <div id="camp_visible_nav_01" onmouseover="camp_nav_visible('camp_nav_01')" onmouseout="camp_nav_invisible('camp_nav_01')">
+                        <!--todo Campo de Navegação -->
+                        <li><a href="{% url 'home' %}">Pagina inicial</a></li>
+                        <li><a href="">Quem nos somos</a></li>
+                        <li><a href="">Terapeutas</a></li>
+                    </div>
+                    
+                    {% if request.user.is_authenticated %}
+                        <div id="camp_nav_02" onmouseover="camp_nav_visible('camp_nav_02')" onmouseout="camp_nav_invisible('camp_nav_02')">Painel de Controle</div>
+                        <div id="camp_visible_nav_02" onmouseover="camp_nav_visible('camp_nav_02')" onmouseout="camp_nav_invisible('camp_nav_02')">
+                            <!--todo Campo de Navegação -->
+                            <li><a href="{% url 'painel_controle' %}">Perfil</a></li>
+                            <li><a href="">Marcar horario</a></li>
+                            <li><a href="{% url 'logout' %}">Logout</a></li>
+                        </div>
+                    {% else %}
+                        <div id="camp_nav_02" onmouseover="camp_nav_visible('camp_nav_02')" onmouseout="camp_nav_invisible('camp_nav_02')">Conta</div>
+                        <div id="camp_visible_nav_02" onmouseover="camp_nav_visible('camp_nav_02')" onmouseout="camp_nav_invisible('camp_nav_02')">
+                            <!--todo Campo de Navegação -->
+                            <li><a href="{% url 'login' %}">Login</a></li>
+                            <li><a href="{% url 'cadastro' %}">Cadastar-me</a></li>
+                            <li><a href="">Contato</a></li>
+                        </div>
+                    {% endif %}
+                        
+                   
+                </nav>
+            </div>
+
         </header>
 
-        <div id="content">
-            {% block content %}
-                
-            {% endblock content %}
+        <div id="middle_pag">
+
+            <div id="conteudo"><!--todo Conteúdo da pagina -->
+
+                {% block content %} {% endblock content %}
+
+            </div>
+
+            <!--? <aside>
+                <div id="conteudo_aside"> {% block aside %} {% endblock aside %} </div> 
+            </aside> -->
+
         </div>
 
-        <aside>
-            {% block aside %}
-                
-            {% endblock aside %}
-        </aside>
+        <br><hr><br> <!--! RETIRAR -->
 
         <footer>
-            <p>Footer</p>
+
+            <div id="redes_sociais">
+                <img src="" alt="Logo Instagram">   <!--? Instagram -->
+                <img src="" alt="Logo Facebook">    <!--? Facebook -->
+                <img src="" alt="Logo WhatsApp">    <!--? Zap -->
+            </div>
+
+            <div id="footer_empresarial">
+                <!--todo Nome e Slogan da Empresa -->
+                <div id=""> <img src="" alt="Logo_Empresarial"></div>
+                <div id=""> Slogan </div>
+            </div>
+
+            <div id="direito_register">
+                <!--todo Registro autorial da pagina -->
+                <div> direito_register </div> <!-- p -->
+            </div>
+
+            <h2 id="teste"> TESTE </h2>
+            <img src="" alt="socorro">
+
         </footer>
 
     </body>
+
+</div>
+
+<script>
+
+    function getPosicaoElemento(elemID) {
+        var Trail = document.getElementById(elemID);
+        var getLeft = 0;
+        var getTop = 0;
+        var getBottom = 0;
+        while (Trail) {
+            getLeft += Trail.offsetLeft;
+            getTop += Trail.offsetTop;
+            getBottom += Trail.offsetHeight;
+            Trail = Trail.offsetParent;
+        }
+        return { left: getLeft, top: getTop, bottom:getBottom };
+        }
+        
+    function setPosicao_navs(id_set, id_get_Lf, id_get_Bt) {
+        var left = (getPosicaoElemento(id_get_Lf).left - 5)
+        var buttom = (getPosicaoElemento(id_get_Bt).bottom)
+
+        console.log(buttom);
+        document.getElementById(id_set).style.left = left.toString() + "px";
+        document.getElementById(id_set).style.buttom = buttom.toString() + "px";
+    }
+
+    setPosicao_navs("camp_visible_nav_01", "camp_nav_01", "campo_nave");
+    setPosicao_navs("camp_visible_nav_02", "camp_nav_02", "campo_nave");
+
+    function camp_nav_visible(id) {
+         if (id == "camp_nav_01") {
+            document.getElementById("camp_visible_nav_01").style.visibility = "visible";
+         } else {
+             if (id == 'camp_nav_02') {
+                 document.getElementById("camp_visible_nav_02").style.visibility = "visible";
+             } else {
+                 if (id == 'camp_nav_03') {
+                 document.getElementById("camp_visible_nav_03").style.visibility = "visible";
+            }  else {}
+             
+            }
+        }
+    }
+    
+    function camp_nav_invisible(id) {
+        if (id == "camp_nav_01") {
+            document.getElementById("camp_visible_nav_01").style.visibility = "hidden";
+        } else {
+            if (id == 'camp_nav_02') {
+                document.getElementById("camp_visible_nav_02").style.visibility = "hidden";
+            } else {
+                if (id == 'camp_nav_03') {
+                document.getElementById("camp_visible_nav_03").style.visibility = "hidden";
+                } else {}
+            }
+        }
+    }
+
+</script>
+
 </html>

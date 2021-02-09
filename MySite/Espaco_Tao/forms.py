@@ -7,22 +7,23 @@ from django.db import models
 
 
 class ClienteForm(forms.ModelForm):
-    
-    password_ver = forms.CharField(max_length=50, required=True,  label="Verifique senha")
-    password = forms.CharField(max_length=50, required=True, label="Senha")
+
+    password = forms.CharField(max_length=50, widget=forms.PasswordInput, required=True, label="Senha")
+    confirm_password = forms.CharField(max_length=50, required=True, widget=forms.PasswordInput, label="Verifique senha")
 
     class Meta:
         model = Cliente
-        fields = ('username', 'first_name', 'last_name', 'email', 'telefone', 'nascimento', 'profissao', 'estado_civil')
+        fields = ('username', 'password', 'confirm_password', 'first_name', 'last_name', 'nascimento', 'email', 'profissao', 'estado_civil', 'telefone')
         widgets = {
             'nascimento': forms.DateInput(format="%d/%m/%Y") 
         }
 
-    def limpar_senha(self):
-        cd = self.cleaned_data
-        if cd['password'] != cd['password_ver']:
-            raise forms.ValidationError('As senhas não são iguais!')
-        
-        else:
-            return cd['password']
+    def clean(self):
+        cleaned_data = super(ClienteForm, self).clean()
+        password = cleaned_data.get("password")
+        confirm_password = cleaned_data.get("confirm_password")
 
+        if password != confirm_password:
+            raise forms.ValidationError(
+                "As senhas inseridas não identicas"
+            )

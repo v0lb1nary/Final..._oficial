@@ -3,46 +3,129 @@
     padding: 0;
 }
 
-nav > li{
-    display: inline;
-    margin: 1em;
+#global_box{
+    background-color: #b217f0;
 }
 
-header{
-    background-color: burlywood;
-}
+    header{
+        background-color: rgb(51, 99, 202);
+    }
+        #header_empresarial{
+            background-color: rgb(184, 92, 214);
+            text-align: center;
+            padding: 1em;
+        }
+            /* #logo_Empresarial{} */
+            /* #slogan_empresarial{} */
 
-#content{
-    background-color: rgb(211, 120, 55);
-    margin: 1em;
-    margin-left: 2em;
-    margin-right: 2em;
+    #campo_nave{
+        vertical-align: middle;
+        align-items: center;
+        padding: 0.1em;
+    }
+        nav{
+            margin: 0.3em;
+        }
+        
+            #camp_nav_01, #camp_nav_02{
+                vertical-align: middle;
+                display: inline;
+                margin: 6em;
+                text-align: center;
+                padding: 0.45em;
+                min-width: 4em;
+            }
+            #camp_nav_02{
+                animation: both;
+            }
+            #camp_visible_nav_01, #camp_visible_nav_02{
+                position: absolute;
+                z-index: 2;
+                visibility: hidden; 
+                padding: 1em;
+                padding-left: 0.3em;
+                padding-right: 1.5em;
+                opacity: 100%;
+                border: black solid 1px;
+                list-style-type: none;
+                /* border-radius: 0 0 10px 5px; */
+            }
+            
+            #camp_visible_nav_01{
+                background-color: rgb(191, 14, 49);
+            }
+            #camp_visible_nav_02{
+                background-color: rgb(206, 43, 179);
+                
+            }
 
-}
-
-footer{
-    background-color: darkgoldenrod;
-}
-
-form > *{
-    margin: 1em;
-}
-
-form > input[type=text], form > textarea{
-    display: inline-block;
-    padding-left: 10px;
-    font: 1em sans-serif;
-    width: 300px;
-    -moz-box-sizing: 300px;
-    box-sizing: border-box;
+                #camp_visible_nav_01 > li ,#camp_visible_nav_02 > li{
+                    margin: 0.6em;
+                }
+                /* li:first-child{
+                    background-color: aqua;
+                } */
     
-}
+    body{
+        margin: 0;
+        padding: 0;
+        
+    }
+        #middle_pag{
+            margin-left: 2em;
+            margin-right: 2em;
+            padding: 1em;
+            background-color: lightcoral;
+        }
+            form{
+                border: 1px double black;
+                border-radius: 0.3em;
+                width: 600px;
+                background-color: darkviolet;
+                margin: 0;
+                padding-top: 0.6em;
+                padding-bottom: 1em;
+            }
+            form > p {
+                margin: 1em 0 1em 1em
+            }
+            form > p > *{
+                vertical-align: middle;
+                display: inline-block;
+                padding-left: 5px;
+                font: 1em sans-serif;
+                width: 150px;
+                -moz-box-sizing: 150px;
+                box-sizing: border-box;
+            }
+            form > p > label{
+                text-align: left;
+                width: 140px;
+            }
+            form > p > input, form > p > option{
+                font-size: 0.9em;
+            }
+            form > p > input, form > p > select{
+                padding: .1em;
+                border: 1px solid rgb(35, 35, 197);
+                border-radius: .3em;
+            }
+            form > input[type=submit]{
+                padding: 0.2em;
+                /* float: left; */
+                display: block;                
+                margin-top: 1.5em;
+                margin-bottom: 1.5em;
+                margin-left: 2em;
+            }
+            .helptext{
+                display: inline-block;
+                width: 250px;
+                font-size: 0.80em;
+                font-style: italic;
+                color: rgb(33, 0, 99);
+            }
 
-form > input[type=submit]{
-    padding-left: 1em;
-    padding-right: 1em;
-}
-
-form > label{
-    text-align: right;
-}
+    footer{
+        visibility: hidden;
+    }
