@@ -16,7 +16,7 @@ urlpatterns = [
 
 
     #& Cadastramento
-    path("cadastro/", views.cadastro_cliente, name="cadastro")
+    path("cadastro/", views.cadastro_cliente, name="cadastro"),
 
 
     #& Alteração de Senha

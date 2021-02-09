@@ -7,12 +7,10 @@
     
 
 {% block content %}
+    <h2>Painel de Controle</h2>
+    <p id="sub_title">Bem vindo {{ request.user.first_name }}, aqui é exibido todas as informações de conta </p>
+    
     <div id="user_perfil">
-        <h2>Painel de Controle</h2>
-        <!-- <hr> -->
-
-        <p>Bem vindo {{ request.user.first_name }}, aqui é exibido todas as informações de conta </p>
-        <br><hr>
         <div id="user_list">
             <p>Informações de usuário:</p>
             <li>Nome de usuário: <strong> {{ request.user.username }} </strong></li>

@@ -91,6 +91,14 @@ header{
             padding: 1em;
             width: auto;
         }
+        #conteudo > h2{
+            padding: .3em; 
+            border-bottom: 1px solid black;
+        }
+        #sub_title{
+            margin: 0.3em;
+            margin-bottom: 1.3em;
+        }
 
 form{
     border: 1px double black;
