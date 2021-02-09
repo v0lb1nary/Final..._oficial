@@ -7,7 +7,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
+    {% block link %}{% endblock link %}
+        
     <title> {% block title %} {% endblock title %} </title>
 
 </head>
@@ -70,15 +71,10 @@
             </div>
 
             
-            <!-- {% if request.url.name ==  %}
-                <aside>
-                {% block aside %} {% endblock aside %}
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt quam aliquam molestias odit est repellat tempore obcaecati non sint placeat consequatur nisi, quo, assumenda eveniet. Officiis possimus quis eveniet eius.</p>
-                </aside> 
-            {% endif %} -->
+            {% block aside %}
                 
-            
-
+            {% endblock aside %}
+                
         </div>
 
         <br><hr><br> <!--! RETIRAR -->

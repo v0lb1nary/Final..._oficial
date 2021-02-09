@@ -11,18 +11,19 @@ h1, h2, h3, h4, h5 , h6 { font-family: 'Muli', sans-serif; font-weight:normal; }
 
 header{
     background-color: rgb(51, 99, 202);
+    vertical-align: middle;
+
 }
 
-#header_empresarial{
+#header_empresarial *{
     font-family: 'Muli', sans-serif;
     color:#f3f7cc;
     font-size:20px;
-    /* margin-right:10%; */
+    
 }
 
 #logo_empresarial{
-    /* width: 50px;
-    height: 50px; */
+    margin-left: 1em;
 }
 
 #campo_nave{
@@ -32,7 +33,7 @@ header{
 }
 
         nav{
-            margin: 0.3em;
+            margin: 0.1em;
         }
         
             #camp_nav_01, #camp_nav_02{
@@ -72,6 +73,9 @@ header{
                     background-color: aqua;
                 } */
     
+        body{
+            width: auto;
+        }
 
         #middle_pag{
             display: inline-flex;
@@ -83,16 +87,12 @@ header{
             padding: 1em;
         }
         #conteudo{
-            width: 65%;
             background-color: lightcoral;
             padding: 1em;
+            width: auto;
         }
 
-        aside{
-            width: 35%;
-            padding: 1em;
-            background-color: mediumpurple;
-        }      
+           
 
 form{
     border: 1px double black;

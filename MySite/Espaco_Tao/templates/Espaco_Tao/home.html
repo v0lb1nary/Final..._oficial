@@ -1,4 +1,11 @@
 {% extends 'base.html' %}
+{% load static %}
+
+
+{% block link %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock link %}
+    
 
 {% block title %} Home {% endblock title %}
 
@@ -6,4 +13,21 @@
     <h2>Sou a HOME da pagina</h2>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos recusandae esse sunt voluptates deserunt, exercitationem eius, aliquid tempora alias, tempore dolores cumque delectus illo voluptas quasi necessitatibus dolorum voluptatibus doloremque.</p>
 {% endblock content %}
+    
+
+{% block aside %}
+    <aside>
+        <h1>Modalidades de nosso Espaço</h1>
+        {% for i in modalidade %}
+            <div class="modalidades">
+                <img src="" alt="Texte" class="img_modalidades">
+                <div class="text">
+                    <h3> {{ i.modalidade }} </h3>
+                    <p> {{ i.descricao }} </p>
+                </div>
+            </div>
+        {% endfor %}
+            
+    </aside>
+{% endblock aside %}
     

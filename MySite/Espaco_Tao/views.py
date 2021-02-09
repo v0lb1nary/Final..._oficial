@@ -2,9 +2,11 @@ from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from .forms import ClienteForm
+from .models import Modalidade
 
 def home_pag(request):
-    return render(request, 'Espaco_Tao/home.html')
+    modalidades = Modalidade.objects.all()
+    return render(request, 'Espaco_Tao/home.html', {'modalidade': modalidades})
 
 @login_required
 def painel_controle_pag(request):

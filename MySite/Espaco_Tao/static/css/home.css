@@ -1,0 +1,34 @@
+
+header{
+    background-color: rgb(199, 27, 27);
+    display: grid;
+}
+
+#conteudo{
+    width: 65%;
+}
+
+aside{
+    width: 35%;
+    padding: 1em;
+    background-color: mediumpurple;
+}   
+
+.modalidades{
+    display: inline-flex;
+    margin: .3em;
+    padding: .5em;
+    border: 1px solid black;
+}
+.img_modalidades{
+    width: 20%;
+}
+.modalidades .text :first-child{
+    margin: .3em;
+    margin-left: 1em;
+    font-weight: bold;    
+}
+.modalidades .text{
+    text-align: left;
+    width: 80%;
+}
