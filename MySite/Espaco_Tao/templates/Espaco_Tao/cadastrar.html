@@ -8,9 +8,11 @@
     <p id="sub_title">Preencha os campos a baixo para se cadastrar no sistema</p>
 
     <form action="" method="post">
-
-        {{ form_cdst.as_p }}
-        {% csrf_token %}
+        <div id="form">
+            {{ form_cdst.as_p }}
+            {% csrf_token %}
+        </div>
+        
         <input type="submit" value="Cadastrar me">
 
     </form>

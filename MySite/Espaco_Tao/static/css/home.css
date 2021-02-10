@@ -1,63 +1,64 @@
-
-header{
-    background-color: rgb(199, 27, 27);
-    display: grid;
-}
-
 #conteudo{
-    width: 65%;
+    width: 60%;
+    box-shadow: 8px 8px 10px #063063;
+    padding: 1.5em;
 }
 #middle_pag{
     display: inline-flex;
 }
 aside{
-    width: 35%;
-    padding: 1em;
-    background-color: mediumpurple;
+    margin-left: 1em;
+    width: 30%;
+    padding: 2em;
+    background-color: #3a94ee;
+    box-shadow: 7px 7px 10px #063063;
 }   
+aside > h1{
+    width: auto;
+    text-align: center;
+    padding-top: .5em;
+    border-bottom: 1px ridge black;
+}
 .modalidades{
     display: inline-flex;
-    margin: .3em;
-    margin-top: 3em;
-    border: 1px solid black;
-}
-.img_modalidades{
-    width: 12%;
-    border: 1px double gold;
+    margin: 1.3em .5em 1.3em .5em;
+    border-left: 1px solid black;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
 }
 
 .modalidades .text :first-child{
-    text-align: right;
+    text-align: left;
     margin: .2em;
-    margin: 0 .8em .8em 1em;
+    margin: 0 .2em .6em 0;
     border-bottom: 1px solid black;
     font-weight: bold;    
 }
 .modalidades .text{
-    /* padding: 1em; */
     text-align: left;
     width: fit-content;
     padding: 1em;
-    /* margin: .5em; */
+    margin-left: .5em;
 }
 
 #rede_sociais{
     margin: 2em;
     padding: 1em;
     text-align: center;
-    border: 1px dashed beige;
 }
-#rede_sociais{
-    
+#rede_sociais h2{
+    border-bottom: 1px solid black;
 }
 #nav_rede div{
     display: inline-block;
+    font-size: .6em;
+    font-weight: lighter;
     margin: 1em;
     padding: .5em;
     text-align: center;
     vertical-align: middle;
-    width: 90px; height: 70px;
+    width: 5.3em; height: 5.3em;
     border-radius: 5px;
-    background-color: teal;
+    background-color: rgb(47, 162, 250);
 
 }

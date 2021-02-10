@@ -117,8 +117,19 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-#redirecionamentos
+#? redirecionamentos
 LOGIN_REDIRECT_URL = 'painel_controle'
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
 
+#// escrever os emails no console
+#// EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
+#? envio de email pelo google
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'pyhton.django@gmail.com'
+EMAIL_HOST_PASSWORD = '123@mudar'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False

@@ -13,7 +13,7 @@ class ClienteForm(forms.ModelForm):
 
     class Meta:
         model = Cliente
-        fields = ('username', 'password', 'confirm_password', 'first_name', 'last_name', 'nascimento', 'email', 'profissao', 'estado_civil', 'telefone')
+        fields = ('username', 'password', 'confirm_password', 'first_name', 'last_name', 'nascimento', 'email', 'profissao', 'estado_civil', 'telefone', 'endereco', 'instagram')
         widgets = {
             'nascimento': forms.DateInput(format="%d/%m/%Y") 
         }

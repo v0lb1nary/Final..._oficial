@@ -10,13 +10,20 @@
     <p id="sub_title"> Formulario para acesso de conta </p>
 
     <form action="{% url 'login' %}" method="post">
+        <div id="form">
+            {{ form.as_p }}
+            {% csrf_token %}
+            <input type="hidden" name="next" value="{{ next }}"> 
+        </div>
 
-        {{ form.as_p }}
-        {% csrf_token %}
-        <input type="hidden" name="next" value="{{ next }}"> 
         <input type="submit" value="Login">
         
     </form>
 
+    <div id="box">
+        <p>Você não ainda possui cadastro? <a href="{% url 'cadastro' %}">Cadastrar-me</a></p>
+        <p>Não lembra sua senha? <a href="{% url 'password_reset' %}">Recuperar Senha</a></p>
+    </div>
+     
 {% endblock content %}
     

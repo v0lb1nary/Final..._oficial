@@ -20,14 +20,19 @@ urlpatterns = [
 
 
     #& Alteração de Senha
-    path('alterar_senha/', auth_views.PasswordChangeView.as_view(), name='password_change'),
-    path('alterar_senha/alterada/', auth_views.PasswordChangeDoneView.as_view(), name='password_change_done'),
+    path('redefinir_senha/', auth_views.PasswordChangeView.as_view(), name='password_change'),
+    path('redefinir_senha/concluida/', auth_views.PasswordChangeDoneView.as_view(), name='password_change_done'),
 
 
-    #& Redefinição de Senha
-    path('reiniciar_senha/', auth_views.PasswordResetView.as_view(), name='password_reset'),
-    path('reiniciar_senha/reiniciada', auth_views.PasswordResetDoneView.as_view(), name='password_reset_done'),
-    path('reiniciar/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(), name='password_reset_confirm'),
-    path('reiniciar/reiniciada/', auth_views.PasswordResetCompleteView.as_view(), name='password_reset_complete'),
+    #& Perca de Senha
+    #? Recuração de Senha
+    #* Parte O1
+    path('recuperar_senha/', auth_views.PasswordResetView.as_view(), name='password_reset'),
+    path('recuperar_senha/recuperada', auth_views.PasswordResetDoneView.as_view(), name='password_reset_done'),
+    
+    #? Redefinição
+    #* Parte 02
+    path('recuperar_senha/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(), name='password_reset_confirm'),
+    path('recuperar_senha/redefinida/', auth_views.PasswordResetCompleteView.as_view(), name='password_reset_complete'),
 
 ]

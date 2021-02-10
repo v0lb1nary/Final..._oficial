@@ -10,17 +10,19 @@
 {% block title %} Home {% endblock title %}
 
 {% block content %}
-    <h2>Sou a HOME da pagina</h2>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos recusandae esse sunt voluptates deserunt, exercitationem eius, aliquid tempora alias, tempore dolores cumque delectus illo voluptas quasi necessitatibus dolorum voluptatibus doloremque.</p>
-{% endblock content %}
+    <h2>Pagina Inicial</h2>
+    <section>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos recusandae esse sunt voluptates deserunt, exercitationem eius, aliquid tempora alias, tempore dolores cumque delectus illo voluptas quasi necessitatibus dolorum voluptatibus doloremque.</p>
+    </section>
+    {% endblock content %}
     
 
 {% block aside %}
     <aside>
-        <h1>Modalidades de nosso Espaço</h1>
+        <h1>Modalidades de Nosso Espaço</h1>
+        
         {% for i in modalidade %}
             <div class="modalidades">
-                <img src="" alt="imagem" class="img_modalidades">
                 <div class="text">
                     <h3> {{ i.modalidade }} </h3>
                     <p> {{ i.descricao }} </p>

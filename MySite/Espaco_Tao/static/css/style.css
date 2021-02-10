@@ -4,26 +4,31 @@
 }
 
 #global_box{
-    background-color: #b217f0;
+    background-color: #118ff0;
 }
 
 h1, h2, h3, h4, h5 , h6 { font-family: 'Muli', sans-serif; font-weight:normal; }
 
-header{
-    background-color: rgb(51, 99, 202);
-    vertical-align: middle;
+a:link{ color: #ffffff}
+a:visited{ color: #ffffff;}
+a:hover{ color: #042042;}
 
+header{
+    background-color: #0574e1;
+    vertical-align: middle;
+    box-shadow: 1px 1px 5px #063063;
+    border: 2px solid #024b94;
 }
 
 #header_empresarial *{
     font-family: 'Muli', sans-serif;
     color:#f3f7cc;
     font-size:20px;
-    
 }
 
 #logo_empresarial{
     margin-left: 1em;
+    font-size: 1.4em;
 }
 
 #campo_nave{
@@ -31,123 +36,155 @@ header{
     vertical-align: middle;
     padding: .7em;
 }
+#campo_nave *{ vertical-align: middle;}
 
-        nav{
-            margin: 0.1em;
-        }
-        nav *{
-            font-family: 'Muli', sans-serif; font-weight:normal;
-        }
-        
-            #camp_nav_01, #camp_nav_02{
-                font-size: .97em;
-                vertical-align: middle;
-                display: inline;
-                margin: 6em;
-                text-align: center;
-                padding: 0.45em;
-                min-width: 4em;
-            }
-            
-            #camp_visible_nav_01, #camp_visible_nav_02{
-                font-size: .9em;
-                position: absolute;
-                z-index: 2;
-                visibility: hidden; 
-                padding: 1em;
-                padding-left: 0.3em;
-                padding-right: 1.5em;
-                opacity: 100%;
-                border: black solid 1px;
-                list-style-type: none;
-                /* border-radius: 0 0 10px 5px; */
-            }
-            
-            #camp_visible_nav_01{
-                background-color: rgb(191, 14, 49);
-            }
-            #camp_visible_nav_02{
-                background-color: rgb(206, 43, 179);
-                
-            }
-
-                #camp_visible_nav_01 > li ,#camp_visible_nav_02 > li{
-                    margin: 0.6em;
-                }
-                /* li:first-child{
-                    background-color: aqua;
-                } */
+nav{
+    margin: 0.1em;
+}
+nav *{
+    font-family: 'Muli', sans-serif; font-weight:normal;
+}
+    nav a:visited{color: #ffffff;}
+    nav a:hover{color: #2c8de9;}
     
-        body{
-            width: auto;
-        }
+#camp_nav_01, #camp_nav_02, #camp_nav_02 *{ 
+    font-size: 1.05em;
+    color: #10106f;
+    vertical-align: middle;
+    display: inline;
+    margin: 6em;
+    text-align: center;
+    padding: 0.1em;
+    padding-bottom: .2em;
+    
+}
+#camp_nav_02 #seta{
+    margin: 0;
+    padding: .1em;
+    padding-left: .3em;
+}
 
-        #middle_pag{
-            background-color: orchid;
-            margin: 1em 1em 1em 1em;
-        }
-        #conteudo{
-            background-color: lightcoral;
-            padding: 1em;
-            width: auto;
-        }
-        #conteudo > h2{
-            padding: .3em; 
-            border-bottom: 1px solid black;
-        }
-        #sub_title{
-            margin: 0.3em;
-            margin-bottom: 1.3em;
-        }
+#camp_visible_nav_01, #camp_visible_nav_02{
+    font-size: .9em;
+    position: absolute;
+    z-index: 2;
+    visibility: hidden; 
+    padding: 1em 1em 0.6em .7em;
+    opacity: 85%;
+    border: #102b52 solid 1px;
+    list-style-type: none;
+    background-color: #102b52;
+    box-shadow: 10px 10px 8px #063063;
+
+}
+
+#camp_visible_nav_01 > li ,#camp_visible_nav_02 > li{
+    margin: 0.6em;
+}
+
+body{
+    width: auto;
+}
+
+#middle_pag{
+    /* background-color: #057be3; */
+    margin: 1em 1em 1em 1em;
+}
+#conteudo{
+    background-color: #6bb6fc;
+    padding: 1em;
+    width: auto;
+    box-shadow: 1px 1px 10px #063063;
+
+}
+#conteudo > h2{
+    padding: .2em; 
+    border-bottom: 2px solid black;
+    font-weight: bolder;
+    font-size: 1.7em;
+}
+#sub_title{
+    font-weight: lighter;
+    font-size: 1.05em;
+    margin: 0.3em;
+    margin-bottom: 2em;
+}
+#conteudo section{
+    margin: 1em 1em 1em .5em;
+    
+}
+
+  /** ============================================ */
+
 
 form{
-    border: 1px double black;
-    border-radius: 0.3em;
-    width: 600px;
-    background-color: darkviolet;
-    margin: 0;
+    
+}
+form #form{
+    /* border-left: 1px solid black; */
+    width: 700px;
+    margin: .9em;
     padding-top: 0.6em;
     padding-bottom: 1em;
+    box-shadow: inset 0px 0px 15px #063063;
+
+}
+form  p {
+    margin: 1.5em 0 1.4em 1.5em;
 }
 
-form > p {
-    margin: 1em 0 1em 1em;
-}
-
-form > p > *{
+form  p > *{
     vertical-align: middle;
     display: inline-block;
-    padding-left: 5px;
+    padding-left: 4px;
     font: 1em sans-serif;
-    width: 150px;
+    width: 170px;
     -moz-box-sizing: 150px;
     box-sizing: border-box;
 }
 
-form > p > label{
+form p > label{
     text-align: left;
-    width: 140px;
+    width: 150px;
 }
 
-form > p > input, form > p > option{
+form  p > input, form > p > option{
     font-size: 0.9em;
 }
 
-form > p > input, form > p > select{
+form  p > input, form  p > select{
     padding: .1em;
-    border: 1px solid rgb(35, 35, 197);
-    border-radius: .3em;
+    border: 1px solid #042042;
+    border-radius: 1px;
 }
 
-form > input[type=submit]{
-    padding: 0.2em;
-    /* float: left; */
-    display: block;                
-    margin-top: 1.5em;
+form  input[type=submit]{
+    padding: .2em 1.2em .2em 1.2em;
+    font: .85em sans-serif;
+    margin-top: 1.2em;
     margin-bottom: 1.5em;
     margin-left: 2em;
+    background-color: #cde3ff;
+    border: 1px solid #042042;
 }
 
+form ul li{
+    padding: .2em;
+    font-size: .9em;
+    font-style: italic;
+    list-style-type: none;
+    margin-left: 1em;
+}
+
+  /** ============================================ */
+
+#conteudo #box{
+    margin: .9em;
+    margin-top: 1.5em;
+}
+
+
+  /** ============================================ */
 .helptext{
     display: inline-block;
     width: 250px;
@@ -156,25 +193,45 @@ form > input[type=submit]{
     color: rgb(33, 0, 99);
 }
 
-#user_perfil{
-    padding: .5em;
+.user_perfil{
+    margin: 1em;
+    padding: 1.6em;
+    box-shadow: inset 1px 1px 10px #063063;
+    border-radius: 4px;
 }
-#user_perfil p{
+.user_perfil p{
     font-family: 'Muli', sans-serif; 
     font-weight:normal; 
-}
-#user_perfil > p{
     font-size: .95em;
 }
+.user_perfil a:visited{ color: #ffffff;}
+.user_perfil a:hover{ color: #042042;}
+
+.user_perfil > h2{
+    margin-bottom: .3em;
+    font-size: 1.6em;
+}
+
 #user_list{
+    padding: .2em;
     margin: 1em;
+    margin-top: 0;
+    
+}
+#user_list ul{
+    border-left: 1px solid #042042;
+    
 }
 #user_list li{
     margin: 1em;
-    list-style-type: none;
+    margin-left: .6em;
+    list-style-type: none;    
 }
+
 #user_list p{ 
     font-weight: bolder;
+    margin: .5em;
+    font-size: 1.05em;
 }
 
 footer{

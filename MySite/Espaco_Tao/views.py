@@ -2,15 +2,15 @@ from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from .forms import ClienteForm
-from .models import Modalidade
+from .models import Modalidade, Cliente
 
 def home_pag(request):
-    modalidades = Modalidade.objects.all()
+    modalidades = Modalidade.objects.all().order_by('modalidade')
     return render(request, 'Espaco_Tao/home.html', {'modalidade': modalidades})
 
 @login_required
 def painel_controle_pag(request):
-    user_login = User.objects.all()
+    user_login = Cliente.objects.all()
     return render(request, 'Espaco_Tao/painel_controle.html', {'user':user_login})
 
 def cadastro_cliente(request):

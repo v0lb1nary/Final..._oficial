@@ -60,7 +60,7 @@ class Modalidade(models.Model):
 
     MODALIDADES_TUPLA = [
         ('', ''),
-        ('Terapia', 'Terapia'),
+        ('Terapia Transpessoal', 'Terapia Transpessoal'),
         ('Tai Chi Chuan', 'Tai Chi Chuan'), 
         ('Cone Hindu', 'Cone Hindu'),
         ('Barras de Access', 'Barras de Access'),]

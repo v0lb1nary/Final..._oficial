@@ -10,14 +10,32 @@
     <h2>Painel de Controle</h2>
     <p id="sub_title">Bem vindo {{ request.user.first_name }}, aqui é exibido todas as informações de conta </p>
     
-    <div id="user_perfil">
+    <div class="user_perfil">
+        <h2>Conta</h2>
         <div id="user_list">
             <p>Informações de usuário:</p>
-            <li>Nome de usuário: <strong> {{ request.user.username }} </strong></li>
-            <li>Email: <strong> {{ request.user.email }} </strong></li>
-            <li>Nome: <strong> {{ request.user.get_full_name }} </strong></li>
-            <li>Data de entrada: <strong> {{ request.user.date_joined }} </strong></li>
-
+            <ul>
+                <li>Nome de usuário: <strong> {{ request.user.username }} </strong></li>
+                <li>Nome: <strong> {{ request.user.get_full_name }} </strong></li>
+                <li>Telefone: <strong> {{ request.user.telefone }} </strong></li>
+                <li>Data de entrada: <strong> {{ request.user.date_joined }} </strong></li>
+            </ul>
+        </div>
+        <div id="user_list">
+            <p>Informações Pessoais:</p>
+            <ul>
+                <li>Email: <strong> {{ request.user.email }} </strong></li>
+                <li>Estado Civil: <strong> {{ request.user.estado_civil }} </strong></li>
+                <li>Nascimento: <strong> {{ request.user.nascimento }} </strong></li>
+                <li>Profissão: <strong> {{ request.user.profissao }} </strong></li>
+                <li>Endereço: <strong> {{ request.user.endereco }} </strong></li>
+            </ul>
+        </div>
+        <div id="user_list">
+            <p>Alterações em Conta</p>
+            <ul>
+                <li>Senha: <a href="{% url 'password_change' %}">alterar senha</a></li>
+            </ul>
         </div>
     </div>
 {% endblock content %}
